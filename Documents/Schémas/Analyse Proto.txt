@@ -1,0 +1,35 @@
+Pour le prototype, nous avons décidé de ne travailler qu'avec 2 VPS et d'utiliser le 3eme pour nos tests.
+
+	Le VPS de Gaëtan sera utilisé pour les services se trouvant en DMZ et sera donc le plus exposé aux différentes attaques.
+		Sur ce VPS on retrouvera : 
+			- Le site vitrine
+			- Le site revendeur (qui pourra faire des requêtes sur la DB via une autorisation spéciale) /!\ Peut-être mettre une API
+			- Le serveur mail
+			- Le SOA externe
+			- Le serveur VoIP
+			
+		L'ensemble des ports ouverts seront donc : 
+			22 SSH
+			80 HTTP
+			443 HTTPS
+			SMTP
+			VoIP
+			DNS
+
+	Le VPS de Brian sera utilisé pour les services internes ainsi que pour le réseau interne. Cela devra être le VPS le plus sécurisé et celui n'autorisant qu'un minimum de connexions.
+		Sur ce VPS, on retrouvera : 
+			- L'ERP
+			- La base de données, pouvant être interrogée en lecture par le site revendeur
+			- Le SOA interne
+			- Le réseau interne de l'entreprise
+			
+			
+		L'ensemble des ports ouvers sont donc : 
+			22 SSH
+			
+
+Pour le schéma réseau de l'entreprise : 
+	- Un pare-feu
+	-
+
+
