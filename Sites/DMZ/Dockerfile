@@ -1,7 +1,7 @@
 FROM php:8.0-apache
 WORKDIR /var/html
 
-RUN apt-get update --no-install-recommends apt-utils
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install nano -y
 
 COPY www/index.html index.html
