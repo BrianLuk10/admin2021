@@ -10,7 +10,6 @@ $TTL	604800
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-
 @	IN	NS	ns.tm1-5.ephec-ti.be.
 ns	IN	A	51.210.42.17
 www	IN	A	51.210.42.17
