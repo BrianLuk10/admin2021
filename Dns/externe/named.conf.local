@@ -1,4 +1,6 @@
-zone "m1-5.ephec-ti.be" IN {
+zone "tm1-5.ephec-ti.be" IN {
 	type master;
-	file "/etc/bind/db.m1-5.ephec-ti.be";
+	file "/etc/bind/db.tm1-5.ephec-ti.be";
 };
+
+
