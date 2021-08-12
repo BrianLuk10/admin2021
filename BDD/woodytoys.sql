@@ -2,8 +2,8 @@
 CREATE DATABASE woodytoys;
 
 -- Utilisateurs
-CREATE USER 'erp' IDENTIFIED BY 'erpWoodyToys2021';
-CREATE USER 'b2b' IDENTIFIED BY 'b2bWoodyToys2021';
+CREATE USER erp IDENTIFIED WITH mysql_native_password BY 'erpWoodyToys2021';
+CREATE USER b2b IDENTIFIED WITH mysql_native_password BY 'b2bWoodyToys2021';
 
 -- Attribuer les IP
 
