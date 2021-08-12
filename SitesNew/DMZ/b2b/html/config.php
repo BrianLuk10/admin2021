@@ -1,6 +1,6 @@
 <?php
     define('USER', 'root');
-    define('PASSWORD', '');
+    define('PASSWORD', 'secret');
     define('HOST', 'localhost');
     define('DATABASE', 'woodytoys');
     try {

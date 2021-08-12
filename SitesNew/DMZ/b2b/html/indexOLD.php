@@ -1,11 +1,3 @@
-<?php
-try { 
-    $connection = new PDO('mysql:host=localhost;dbname=woodytoys;charset=utf8', 'root', 'secret');
-    echo "connect OK";
-} catch (PDOException $e) {
-    echo $e;
-}
-?>
 <!DOCTYPE html>
 <html>
 
@@ -27,6 +19,7 @@ try {
 	</form>
 	<?php
 		session_start();
+		include('config.php');
 		if (isset($_POST['connexionClient'])) {
 			$identifiant = $_POST['identifiantClient'];
 			$mdp = $_POST['mdpClient'];
