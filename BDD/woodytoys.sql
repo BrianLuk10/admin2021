@@ -8,8 +8,8 @@ CREATE USER 'b2b'@'%' IDENTIFIED WITH mysql_native_password BY 'b2bWoodyToys2021
 CREATE DATABASE woodytoys;
 
 -- Droits
-GRANT ALL PRIVILEGES ON woodytoys.* TO 'erp'@'%';
-GRANT SELECT ON woodytoys.* TO 'b2b'@'%';
+GRANT ALL PRIVILEGES ON woodytoys.* TO 'erp'@'%' IDENTIFIED BY 'erpWoodyToys2021';
+GRANT SELECT ON woodytoys.* TO 'b2b'@'%' IDENTIFIED BY 'b2bWoodyToys2021';
 
 USE woodytoys;
 
