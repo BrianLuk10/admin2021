@@ -11,7 +11,22 @@ tm1-5.ephec-ti.be.	IN	SOA	ns.tm1-5.ephec-ti.be. he201676@students.ephec.be. (
 			 604800 )	; Negative Cache TTL
 ;
 
+;configuration du ns
 tm1-5.ephec-ti.be.	IN	NS	ns.tm1-5.ephec-ti.be.
 ns	IN	A	51.210.42.17
+
+;configuration du web
 www	IN	A	51.210.42.17
-b2b	IN	A	51.210.42.17
+b2b	IN	CNAME	www
+
+;configuration du la VoIP
+sip	IN	A	51.210.42.17
+_sip._udp.tm1-5.ephec-ti.be.    SRV 0 0 5060 sip
+_sip._tcp.tm1-5.ephec-ti.be.    SRV 0 0 5060 sip
+
+;configuration du mail
+mail	IN	A	51.210.42.17
+@	IN	MX	10	mail.tm1-5.ephec-ti.be.
+smtp	IN	CNAME	mail
+pop3	IN	CNAME	mail
+imap	IN	CNAME	mail

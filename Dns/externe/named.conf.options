@@ -24,7 +24,8 @@ options {
 
 	allow-query {any; };
 	allow-recursion {none; };
+	allow-transfer{none; };
 	listen-on {any; };
-	listen-on-v6 { any; };
+	listen-on-v6 { none; };
 	recursion no;
 };
