@@ -1,6 +1,6 @@
 CREATE DATABASE woodytoys;
 
-CREATE USER erp IDENTIFIED WITH mysql_native_password BY 'erpWoodyToys2021';
+CREATE USER erp IDENTIFIED WITH mysql_native_password BY 'Password';
 GRANT ALL PRIVILEGES ON woodytoys.* TO 'erp'@'%';
 
 
