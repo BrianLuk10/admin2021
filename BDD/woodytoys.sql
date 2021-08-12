@@ -1,11 +1,11 @@
--- Utilisateurs
-CREATE USER 'erp'@'%' IDENTIFIED BY 'erpWoodyToys2021';
-CREATE USER 'b2b'@'%' IDENTIFIED BY 'b2bWoodyToys2021';
-
--- Attribuer les IP
-
 -- Base de données : `woodytoys`
 CREATE DATABASE woodytoys;
+
+-- Utilisateurs
+CREATE USER 'erp' IDENTIFIED BY 'erpWoodyToys2021';
+CREATE USER 'b2b' IDENTIFIED BY 'b2bWoodyToys2021';
+
+-- Attribuer les IP
 
 -- Droits
 GRANT ALL PRIVILEGES ON woodytoys.* TO 'erp'@'%';
