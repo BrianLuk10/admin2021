@@ -1,3 +1,12 @@
+<?php
+try { 
+    $pdo = new PDO('mysql:host=51.210.42.27;dbname=woodytoys', 'erp', 'Password');
+    echo "connect OK";
+} catch (PDOException $e) {
+    echo $e;
+    die("Connection impossible");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,12 +27,11 @@
 		<button type="submit" name="connexionClient" value="connexionClient">Connexion</button>
 	</form>
 	<?php
-		session_start();
-		include('config.php');
+		// session_start();
 		if (isset($_POST['connexionClient'])) {
 			$identifiant = $_POST['identifiantClient'];
 			$mdp = $_POST['mdpClient'];
-			$query = $connection->prepare("SELECT * FROM clients WHERE identifiantClient=:identifiantClient");
+			$query = $pdo->prepare("SELECT * FROM clients WHERE identifiantClient=:identifiantClient");
 			$query->bindParam("identifiantClient", $identifiant, PDO::PARAM_STR);
 			$query->execute();
 			$resultat = $query->fetch(PDO::FETCH_ASSOC);
