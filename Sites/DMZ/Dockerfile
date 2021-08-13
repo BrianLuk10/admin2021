@@ -6,12 +6,10 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 
 COPY sites-available/ /etc/apache2/sites-available
+COPY www/ /var/www/html
 
-RUN ls -s /etc/apache2/sites-available/b2b.conf /etc/apache2/sites-enabled
-RUN ls -s /etc/apache2/sites-available/www.conf /etc/apache2/sites-enabled
-
-COPY www/index.html /var/www/html/index.html
-COPY www/b2b/index.php /var/www/html/b2b/index.php
-# COPY www/ /var/www/html
+RUN a2ensite www.conf
+RUN a2ensite b2b.conf
+# RUN service apache2 reload
 
 EXPOSE 80

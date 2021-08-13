@@ -10,6 +10,8 @@ RUN apt-get install -y dnsutils
 RUN apt-get install -y bind9utils
 RUN apt-get install -y bind9-doc
 
+RUN sed -i 's/OPTIONS=.*/OPTIONS="-4 -u bind"/' /etc/default/bind9
+
 # On copie les fichier de configuration
 COPY externe/db.tm1-5.ephec-ti.be /etc/bind/db.tm1-5.ephec-ti.be
 COPY externe/named.conf /etc/bind/named.conf
