@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update
 RUN apt-get upgrade
-RUN apt-get install gcc make pkg-config build-essential wget libssl-dev libncurses5-dev libnewt-dev  libxml2-dev linux-headers-$(uname -r) uuid-dev libsqlite3-dev libjansson-dev libedit-dev -y
+RUN apt-get install gcc make pkg-config build-essential wget libssl-dev libncurses5-dev libnewt-dev  libxml2-dev uuid-dev libsqlite3-dev libjansson-dev libedit-dev -y
 RUN apt-get install dnsutils -y
 RUN apt-get install nano -y
 RUN apt-get install net-tools -y
