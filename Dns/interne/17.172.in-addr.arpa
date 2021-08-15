@@ -1,0 +1,17 @@
+;
+; BIND data file for local loopback interface
+;
+$ORIGIN 17.172.in-addr.arpa.
+$TTL	604800
+@	IN	SOA	ns.woodytoys.local. brian.woodytoys.local. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns.woodytoys.local.
+
+1	PTR	bdd.woodytoys.local.
+2	PTR	ns.woodytoys.local.
+3	PTR	erp.woodytoys.local.
