@@ -22,10 +22,16 @@ options {
 
 	auth-nxdomain no;
 
+	
+	//autorise toutes les requetes
 	allow-query {any; };
+	//pas de recursion
 	allow-recursion {none; };
+	recursion no;
+	//pas de transfere d'information dans un autre dns, on en a qu'un
 	allow-transfer{none; };
+
+	//ecoute sur les interfaces en ipv4
 	listen-on {any; };
 	listen-on-v6 { none; };
-	recursion no;
 };
