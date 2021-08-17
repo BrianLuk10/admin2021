@@ -21,8 +21,8 @@ b2b	IN	CNAME	www
 
 ;configuration du la VoIP
 sip	IN	A	51.210.42.17
-_sip._udp.tm1-5.ephec-ti.be.    SRV 0 0 5060 sip
-_sip._tcp.tm1-5.ephec-ti.be.    SRV 0 0 5060 sip
+_sip._udp.tm1-5.ephec-ti.be.    SRV 0 0 5082 sip
+_sip._tcp.tm1-5.ephec-ti.be.    SRV 0 0 5082 sip
 
 ;configuration du mail
 mail	IN	A	51.210.42.17
