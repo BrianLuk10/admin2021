@@ -1,6 +1,9 @@
 FROM php:7.2-apache
-COPY .   /var/www
+COPY sites-available/ /etc/apache2/sites-available
+COPY html   /var/www
 
 RUN docker-php-ext-install pdo pdo_mysql
+
+RUN a2ensite erp.conf
 
 EXPOSE 80
