@@ -3,7 +3,7 @@ CREATE DATABASE woodytoys;
 CREATE USER erp IDENTIFIED WITH mysql_native_password BY 'Password';
 GRANT ALL PRIVILEGES ON woodytoys.* TO 'erp'@'%';
 CREATE USER b2b IDENTIFIED WITH mysql_native_password BY 'Passwordb2b';
-GRANT SELECT ON woodytoys.* TO 'b2b'@'%';
+GRANT SELECT ON woodytoys.clients TO 'b2b'@'%';
 
 USE woodytoys;
 

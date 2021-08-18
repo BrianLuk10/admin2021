@@ -1,6 +1,6 @@
 <?php
 try { 
-    $pdo = new PDO('mysql:host=51.210.42.27;dbname=woodytoys', 'erp', 'Password');
+    $pdo = new PDO('mysql:host=51.210.42.27;dbname=woodytoys', 'b2b', 'Passwordb2b');
     echo "connect OK";
 } catch (PDOException $e) {
     echo $e;
