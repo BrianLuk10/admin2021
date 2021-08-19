@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  voip:
+    build: ./VoIP
+    container_name: voip3
+    ports:
+      - '5082:5060/udp'
+      - '5082:5060/tcp'
+    volumes:
+      - '/var/log/asterisk/fail2ban:/var/log/asterisk/messages'

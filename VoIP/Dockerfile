@@ -6,6 +6,7 @@ RUN apt-get install gcc make pkg-config build-essential wget libssl-dev libncurs
 RUN apt-get install dnsutils -y
 RUN apt-get install nano -y
 RUN apt-get install net-tools -y
+RUN apt-get install fail2ban -y
 
 RUN mkdir /usr/src/asterisk
 WORKDIR /usr/src/asterisk
@@ -25,8 +26,10 @@ RUN make config
 
 COPY . /etc/asterisk
 
+COPY fail2ban/asteriskjail.conf /etc/fail2ban/jail.d/asteriskjail.conf
 
-EXPOSE 5060 5060/udp
-EXPOSE 5060 5060/tcp
-EXPOSE 5061 5061/udp
-EXPOSE 5061 5061/tcp
+RUN touch /var/log/asterisk/fail2ban
+RUN service asterisk start
+
+EXPOSE 5082 5060/udp
+EXPOSE 5082 5060/tcp

@@ -6,8 +6,10 @@ RUN apt update && apt upgrade -y && apt install bind9 bind9utils dnsutils net-to
 
 #Copie des fichiers d'installations préparé et configuré
 COPY named.conf /etc/bind/
-
+COPY named.conf.local /etc/bind/
+COPY named.conf.options /etc/bind/
 COPY db.tm1-5.ephec-ti.be /etc/bind/
+COPY db.tm1-5.ephec-ti.be.signed /etc/bind/
 
 #Exposition des ports de l'image sur le port 53 tcp et udp
 EXPOSE 53/udp
